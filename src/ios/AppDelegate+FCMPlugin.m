@@ -10,8 +10,13 @@
 #import <objc/runtime.h>
 #import <Foundation/Foundation.h>
 
+
+
 @import FirebaseInstanceID;
 @import FirebaseMessaging;
+
+
+@implementation AppDelegate (MCPlugin)
 
 static NSData *lastPush;
 NSString *const kGCMMessageIDKey = @"gcm.message_id";
