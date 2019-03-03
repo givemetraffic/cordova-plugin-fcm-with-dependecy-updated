@@ -25,6 +25,10 @@ FCMPlugin.prototype.onTokenRefresh = function( callback ){
 FCMPlugin.prototype.getToken = function( success, error ){
 	exec(success, error, "FCMPlugin", 'getToken', []);
 }
+// REQUESTION PERMISSIONS WHEN NEEDED //
+FCMPlugin.prototype.requestPermissionOnIOS = function() {
+    exec(function() {}, function() {}, "FCMPlugin", 'requestPermissionOnIOS', []);
+}
 
 // DEFAULT NOTIFICATION CALLBACK //
 FCMPlugin.prototype.onNotificationReceived = function(payload){
