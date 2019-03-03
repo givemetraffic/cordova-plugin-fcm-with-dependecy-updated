@@ -10,7 +10,6 @@
 - (void)ready:(CDVInvokedUrlCommand*)command;
 - (void)requestPermissionOnIOS:(CDVInvokedUrlCommand*)command;
 - (void)getToken:(CDVInvokedUrlCommand*)command;
-- (void)getToken:(CDVInvokedUrlCommand*)command;
 - (void)subscribeToTopic:(CDVInvokedUrlCommand*)command;
 - (void)unsubscribeFromTopic:(CDVInvokedUrlCommand*)command;
 - (void)registerNotification:(CDVInvokedUrlCommand*)command;

@@ -142,7 +142,7 @@ static FCMPlugin *fcmPluginInstance;
         (UIRemoteNotificationTypeSound |
          UIRemoteNotificationTypeAlert |
          UIRemoteNotificationTypeBadge);
-        [application registerForRemoteNotificationTypes:allNotificationTypes];
+        [UIApplication registerForRemoteNotificationTypes:allNotificationTypes];
 #pragma clang diagnostic pop
     } else {
         // iOS 8 or later
