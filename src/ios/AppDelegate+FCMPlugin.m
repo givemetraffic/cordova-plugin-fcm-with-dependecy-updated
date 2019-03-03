@@ -203,7 +203,6 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
     // UIApplicationStateInactive - app is transitioning from background to
     //                              foreground (user taps notification)
 
-    UIApplicationState state = application.applicationState;
     if (application.applicationState == UIApplicationStateActive
         || application.applicationState == UIApplicationStateInactive) {
         [userInfoMutable setValue:@(NO) forKey:@"wasTapped"];
