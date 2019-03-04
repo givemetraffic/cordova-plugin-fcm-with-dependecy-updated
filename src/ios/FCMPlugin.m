@@ -132,19 +132,7 @@ static FCMPlugin *fcmPluginInstance;
 
 - (void) requestPermissionOnIOS:(CDVInvokedUrlCommand*)command;
 {
-    // Register for remote notifications. This shows a permission dialog on first run, to
-    // show the dialog at a more appropriate time move this registration accordingly.
-    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_7_1) {
-        // iOS 7.1 or earlier. Disable the deprecation warnings.
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-        UIRemoteNotificationType allNotificationTypes =
-        (UIRemoteNotificationTypeSound |
-         UIRemoteNotificationTypeAlert |
-         UIRemoteNotificationTypeBadge);
-        [UIApplication registerForRemoteNotificationTypes:allNotificationTypes];
-#pragma clang diagnostic pop
-    } else {
+
         // iOS 8 or later
         // [START register_for_notifications]
         if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_9_x_Max) {
@@ -167,7 +155,7 @@ static FCMPlugin *fcmPluginInstance;
         
         [[UIApplication sharedApplication] registerForRemoteNotifications];
         // [END register_for_notifications]
-    }
+
 }
 
 @end
