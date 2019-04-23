@@ -248,6 +248,7 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     NSLog(@"app become active");
+    application.applicationIconBadgeNumber = 0;
     [FCMPlugin.fcmPlugin appEnterForeground];
     [self connectToFcm];
 }
